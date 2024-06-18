@@ -1,0 +1,94 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 1px;
+  /* Width of the scrollbar */
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+  /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24224d;
+  /* Color of the scrollbar thumb */
+  background: #fff;
+  /* Color of the scrollbar thumb */
+  border-radius: 4px;
+  /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color of the scrollbar thumb on hover */
+}
+
+body {
+  margin: 0;
+  font-family: Roboto Mono, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #000;
+  background-color: #000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes releaseEffect {
+  0% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.customBtn:hover {
+  opacity: 0.9;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+.customBtn {
+  background-color: #000;
+  color: #fff;
+}
+
+.customBtn:active {
+  background-color: #000;
+  color: #fff;
+  transform: scale(0.95);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: releaseEffect 0.3s ease-in-out forwards;
+}
+
+.stakeContainer {
+  background-color: #fff;
+  border: 1px #000;
+  border-style: dashed;
+}
+
+.stakeContainer:active {
+  background-color: #fff;
+  border: 1px #000;
+  border-style: dashed;
+}
+
+.IBM-Plex-Mono {
+  font-family: IBM Plex Mono, sans-serif;
+}
